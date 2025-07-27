@@ -49,3 +49,4 @@ sinus_toplam = math_sin_a + math_sin_b
 print("a ve b'nin sinüslerinin toplamı:", sinus_toplam)
 
 
+

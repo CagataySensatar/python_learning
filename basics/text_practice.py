@@ -29,4 +29,9 @@ print("Boşluksuz metin:", no_spaces)
 
 # Metni boşluklardan bölerek kelime sayısını buluyoruz.
 word_count = len(text.split())
-print("Kelime sayısı:", word_count) 
+print("Kelime sayısı:", word_count)
+
+
+
+
+
