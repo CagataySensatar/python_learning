@@ -87,5 +87,5 @@ else:
     a = [1, 2, 3]
     b = [1, 2, 3]
     c = a
-    print(f"a is b: {a is b}")  # False
+    print(f"a is b: {a is b}")  # False Çünkü a ve b farklı nesneler, bellekte adresleri farklı
     print(f"a is c: {a is c}")  # True
