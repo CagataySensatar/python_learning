@@ -6,6 +6,7 @@ print("Girdiğiniz metin:", text)
 
 # Şimdi, girdiğiniz metni ters çevireceğiz.
 # Bunun için dilimleme yöntemini kullanıyoruz: [::-1] ifadesi metni sondan başa doğru sıralar.
+reversed_text = text[::-1]
 print("Ters çevrilmiş metin:", reversed_text)
 
 # Metnin her ikinci karakterini ekrana yazdıralım.

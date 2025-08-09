@@ -54,4 +54,3 @@ def buyuk_sayi(liste):
             en_buyuk = sayi
     return en_buyuk
 print(buyuk_sayi(list_numbers))
-# Başarılar! Cevaplarınızı kod olarak bu dosyaya yazabilirsiniz.
