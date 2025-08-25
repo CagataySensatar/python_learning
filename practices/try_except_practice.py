@@ -67,6 +67,34 @@ listfunc(c)
 #    - Format yanlışsa kendi Custom Exception (ör. InputFormatError) fırlat.
 #    - Doğru formatta ise iki sayıyı int'e çevirip tuple olarak döndür.
 #    - Kullanan tarafta try/except ile test et.
+class InputFormatError(Exception):
+    pass
+
+def formatfunc(metin):
+    if "," not in metin:
+        raise InputFormatError("Format yanlış! 'a,b' bekleniyor.")
+    
+    sol, sag = metin.split(",", 1)
+    sol = sol.strip()
+    sag = sag.strip()
+
+    if sol == "" or sag == "":
+        raise InputFormatError("Virgülün iki tarafında da sayı olmalı.")
+    
+    a = int(sol)   # ValueError olabilir
+    b = int(sag)
+    return a, b
+
+girdiler = ["3,5", "10, 20", "7-8", "x,4", "12,"]
+
+for g in girdiler:
+    try:
+        print(g, "->", formatfunc(g))
+    except InputFormatError as e:
+        print(g, "-> Format hatası:", e)
+    except ValueError as e:
+        print(g, "-> Sayı hatası:", e)
+
 
 # 5) else/finally kullanımını gösteren bir akış kur:
 #    - try içinde riskli bir işlem yap (örn: int çevirimi)
